@@ -46,24 +46,24 @@
     <div class="container" id="main">
         <div class="row">
             <h1 class="col-md-12 text-center">
-                Exploiting Edge-Oriented Reasoning for 3D Point-based<br>Scene Graph Analysis
+                From Promise to Practical Reality: Transforming Diffusion MRI Analysis with Deep Learning Enhancement
             </h1>
             <h6 class="col-md-12 text-center">
-                <b><i>EdgeGCN</i></b>
+                <b><i>FastFOD-Net</i></b>
             </h6>
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
-                    <li>
+                    <!-- <li>
                         <a href="https://chaoyivision.github.io/" target='_blank'>
                           Chaoyi Zhang
                         </a><sup>1</sup>
-                    </li>
+                    </li> -->
                     <li>
-                        Jianhui Yu<sup>1</sup>
+                        Xinyi Wang
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="http://www.cse.unsw.edu.au/~ysong/" target='_blank'>
                           Yang Song
                         </a><sup>2</sup>
@@ -72,7 +72,7 @@
                         <a href="https://www.sydney.edu.au/engineering/about/our-people/academic-staff/tom-cai.html" target='_blank'>
                           Weidong Cai
                         </a><sup>1</sup>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -81,11 +81,11 @@
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                     <li>
-                        <sup>1</sup>University of Sydney
+                        University of Sydney
                     </li>
-                    <li>
+                    <!-- <li>
                         <sup>2</sup>University of New South Wales
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -94,13 +94,13 @@
                 <div class="col-md-8 col-md-offset-2 text-center">
                     <ul class="nav nav-pills nav-justified">
                         <li>
-                            <a href="https://arxiv.org/pdf/2103.05558.pdf" target='_blank'>
+                            <a href="https://arxiv.org/pdf/xxx.pdf" target='_blank'>
                             <img src="./index_files/images/paper.png" height="80px"><br>
                                 <h4><strong>Main Paper</strong></h4>
                             </a>
                         </li>
                         <li>
-                            <a href="./supplementary.pdf" target='_blank'>
+                            <a href="./supplementaryxxx.pdf" target='_blank'>
                             <img src="./index_files/images/supp.png" height="80px"><br>
                                 <h4><strong>Supp. Materials</strong></h4>
                             </a>
@@ -120,7 +120,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/chaoyivision/SGGpoint" target='_blank'>
+                            <a href="https://github.com/xxx" target='_blank'>
                             <img src="./index_files/images/github_pad.png" height="80px"><br>
                                 <h4><strong>Code</strong></h4> <p style="color:blue;font-size:11px;"></p>
                             </a>
@@ -143,44 +143,8 @@
                 </h3>
                 <img src="./index_files/images/teaser.png" class="img-responsive" alt="overview"><br>
                 <p class="text-justify">
-                Scene understanding is a critical problem in computer vision.
-In this paper, we propose a 3D point-based scene graph generation (\(\bf{SGG_{point}}\)) framework to effectively bridge perception and reasoning to achieve scene understanding via three sequential stages, namely scene graph construction, reasoning, and inference.
-Within the reasoning stage, an EDGE-oriented Graph Convolutional Network (\(\texttt{EdgeGCN}\)) is created to exploit multi-dimensional edge features for explicit relationship modeling, together with the exploration of two associated twinning interaction mechanisms between nodes and edges for the independent evolution of scene graph representations.
-Overall, our integrated \(\bf{SGG_{point}}\) framework is established to seek and infer scene structures of interest from both real-world and synthetic 3D point-based scenes.
-Our experimental results show promising edge-oriented reasoning effects on scene graph generation studies. We also demonstrate our method advantage on several traditional graph representation learning benchmark datasets, including the node-wise classification on citation networks and whole-graph recognition problems for molecular analysis.</p>
-            </div>
+                TBD
         </div>
-
-
-        <div class="row" id="video">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>Video</h3><p style="color:blue;font-size:11px;">(contains audio w/ subtitles)</p>
-                <div class="text-center">
-                    <video id="video_id" width="100%" controls="" controlsList="nodownload">>
-                        <source src="./video-SGGpoint.mp4" type="video/mp4">
-                        <track label="English" kind="subtitles" srclang="en" src="./@InProceedings{SGGpoint,
-    author    = {Zhang, Chaoyi and Yu, Jianhui and Song, Yang and Cai, Weidong},
-    title     = {Exploiting Edge-Oriented Reasoning for 3D Point-Based Scene Graph Analysis},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = {June},
-    year      = {2021},
-    pages     = {9705-9715}
-}SGGpoint.vtt">
-                    </video>
-
-                    <script type="text/javascript">
-                        $(document).ready(function() {
-                        var video = document.querySelector('#video_id'); // get the video element
-                        var tracks = video.textTracks; // one for each track element
-                        var track = tracks[0]; // corresponds to the first track element
-                        track.mode = 'hidden';});
-                    </script>
-
-                </div>
-            </div>
-        </div>
-
-
 
 
         <div class="row" id="dataset">
@@ -189,36 +153,7 @@ Our experimental results show promising edge-oriented reasoning effects on scene
                     Datasets & Evaluation Scripts
                 </h3>
                 <p class="text-justify">
-                    <ul>
-                        <li>
-                            <b>3D $\mathbf{SGG_{point}}$ on <span style="color:rgb(245, 125, 125)">Real-World</span> 3D Scans: 3DSSG-<font color="red">O27</font><font color="blue">R16</font></b> (based on 3RScan + 3DSSG).
-                            <ul>
-                                <li> 3D Scans (3RScan Dataset): <a href="https://arxiv.org/pdf/1908.06109.pdf" target='_blank'><i>paper</i></a>, <a href="https://waldjohannau.github.io/RIO/" target='_blank'><i>dataset</i></a> </li>
-                                <li> Scene Graph Annotations (3DSSG): <a href="https://arxiv.org/pdf/2004.03967.pdf" target='_blank'><i>paper</i></a>, <a href="https://3dssg.github.io/" target='_blank'><i>dataset</i></a> </li>
-                                <li> Our own preprocessed <b>3DSSG-<font color="red">O27</font><font color="blue">R16</font></b> dataset is available at <a href="https://cloudstor.aarnet.edu.au/plus/s/gmZxA7xNWGxjVDY" target='_blank'><i>HERE</i></a>. Note: our 3DSSG-<font color="red">O27</font><font color="blue">R16</font> is derived from 3RScan + 3DSSG, which was initially collected and annoated by <a href="http://campar.in.tum.de/Main/JohannaWald" target='_blank'>Johanna Wald Et Al</a>. To fully honour their data ownership and efforts in creating the datasets, please restrictly follow the 4-step instructions below to obtain it.
-                                    <ol>
-                                        <li> Fill in and submit this <a href="https://docs.google.com/forms/d/e/1FAIpQLSfl9Xm1qWiGmN2HXzbRIecVns_V-n-4bwrzPEE4ZezEpOKT9Q/viewform" target='_blank'>online form</a> (3RScan Terms of Use - as requested in <a href="https://waldjohannau.github.io/RIO/" target='_blank'>3RScan</a>) to register your interests in the datasets.
-                                        <li> A welcome webpage will be redirected immediately to display the full access to the raw 3RScan and 3DSSG datasets.
-                                        <li> Take a screenshot of this welcome webpage and send it (with your name and school pls) to our <a href="mailto:SGGpoint@gmail.com">SGGpoint@gmail.com</a> to receive the <u>access password</u>.
-                                        <li> Go to the <a href="https://cloudstor.aarnet.edu.au/plus/s/gmZxA7xNWGxjVDY" target='_blank'>Download Page</a> to obtain our <b>3DSSG-<font color="red">O27</font><font color="blue">R16</font></b> dataset, where the detailed dataset info/structure could be found in <a href="https://chaoyivision.github.io/SGGpoint/" target='_blank'>Dataset Description</a>.
-                                    </ol>
-                            </ul>
-                        </li>
-                        <li>
-                            <b>3D $\mathbf{SGG_{point}}$ on <span style="color:rgb(143, 171, 219)">Synthetic</span> 3D Scenes: SUNCG + SceneGraphNet</b>.
-                            <ul>
-                                <li> 3D Scenes (SUNCG Dataset): <a href="https://arxiv.org/pdf/1611.08974.pdf" target='_blank'><i>paper</i></a></li>
-                                <li> Scene Graph Annotations (SceneGraphNet): <a href="https://arxiv.org/pdf/1907.11308.pdf" target='_blank'><i>paper</i></a>, <a href="https://github.com/yzhou359/3DIndoor-SceneGraphNet/#Dataset" target='_blank'><i>dataset</i></a>, <a href="https://people.umass.edu/~yangzhou/scenegraphnet/" target='_blank'><i>project</i></a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <b>Traditional Graph Representation Learning: Planetoid + MoleculeNet.</b>
-                            <ul>
-                                <li> Node classification for citation analysis on Planetoid dataset (Cora, CiteSeer, and Pubmed): <a href="https://arxiv.org/pdf/1603.08861.pdf" target='_blank'><i>paper</i></a>, <a href="https://pytorch-geometric.readthedocs.io/en/latest/notes/introduction.html#learning-methods-on-graphs" target='_blank'><i>script</i></a>
-                                <li> Graph recognition for molecular analysis on MoleculeNet dataset (Tox21 and BBBP): <a href="https://arxiv.org/pdf/1703.00564.pdf" target='_blank'><i>paper</i></a>, <a href="https://github.com/awslabs/dgl-lifesci/blob/master/examples/property_prediction/moleculenet/classification.py" target='_blank'><i>script</i></a>
-                            </ul>
-                        </li>
-                    </ul>
+                    TBD
                 </p>
             </div>
         </div>
@@ -230,14 +165,7 @@ Our experimental results show promising edge-oriented reasoning effects on scene
                 </h3>
                If you find our data or project useful in your research, please cite:
                 <pre class="w3-panel w3-leftbar w3-light-grey" style="white-space: pre-wrap; font-family: monospace; font-size: 10px">
-@InProceedings{SGGpoint,
-    author    = {Zhang, Chaoyi and Yu, Jianhui and Song, Yang and Cai, Weidong},
-    title     = {Exploiting Edge-Oriented Reasoning for 3D Point-Based Scene Graph Analysis},
-    booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = {June},
-    year      = {2021},
-    pages     = {9705-9715}
-}</pre>
+TBD</pre>
             </div>
         </div>
 
@@ -246,7 +174,7 @@ Our experimental results show promising edge-oriented reasoning effects on scene
                 <h3>
                     Acknowledgments
                 </h3>
-                The website template was borrowed from <a href="https://ucsd-openrooms.github.io/" target='_blank'>Zhenqin Li's project</a>.
+                tbd</a>.
                 <p></p>
             </div>
         </div>
