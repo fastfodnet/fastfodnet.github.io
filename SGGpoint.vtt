@@ -1,0 +1,210 @@
+WEBVTT
+
+1
+00:00:02.000 --> 00:00:05.000
+Hello everyone. Thanks for watching this video.
+
+2
+00:00:06.000 --> 00:00:07.000
+Today we present our work,
+
+3
+00:00:08.000 --> 00:00:13.000
+Exploiting Edge-Oriented Reasoning for 3D Point-based Scene Graph Analysis.
+
+4
+00:00:14.000 --> 00:00:18.000
+Scene understanding is a critical problem in computer vision.
+
+5
+00:00:18.000 --> 00:00:23.000
+In this paper, we propose a 3D point-based scene graph generation framework
+
+6
+00:00:23.000 --> 00:00:27.000
+to effectively bridge perception and reasoning to achieve scene understanding.
+
+7
+00:00:28.000 --> 00:00:30.000
+It contains three sequential stages,
+
+8
+00:00:31.000 --> 00:00:32.000
+scene graph construction,
+
+9
+00:00:32.000 --> 00:00:34.000
+scene graph reasoning,
+
+10
+00:00:34.000 --> 00:00:37.000
+and scene graph inference.
+
+11
+00:00:38.000 --> 00:00:42.000
+In scene graph construction, for each 3D real-world scan or synthetic scene,
+
+12
+00:00:43.000 --> 00:00:46.000
+we firstly sample its point-based representation
+
+13
+00:00:47.000 --> 00:00:50.000
+and pass these points into a point cloud processing backbone network,
+
+14
+00:00:50.000 --> 00:00:52.000
+such as PointNet or DGCNN,
+
+15
+00:00:52.000 --> 00:00:55.000
+to derive their point-wise features.
+
+16
+00:00:56.000 --> 00:00:58.000
+Then a symmetric pooling function is performed
+
+17
+00:00:58.000 --> 00:01:01.000
+along the class-agnostic point-to-instance indicator
+
+18
+00:01:01.000 --> 00:01:04.000
+to generate the instance-wise node features,
+
+19
+00:01:04.000 --> 00:01:10.000
+followed by the initialisation of our multi-dimensional edge features between the objects.
+
+20
+00:01:10.000 --> 00:01:15.000
+These captured node and edge features will be adopted for constructing the initial
+
+21
+00:01:15.000 --> 00:01:19.000
+scene graph representation for further reasoning operations.
+
+22
+00:01:20.000 --> 00:01:25.000
+The popular GCN and its variants focus more on node recognition tasks over the edge ones,
+
+23
+00:01:25.000 --> 00:01:30.000
+while underestimating the discriminative potentials of the multi-dimensional edge features.
+
+24
+00:01:31.000 --> 00:01:36.000
+Hence, we built our Vanilla EdgeGCN, which simply contains two independent evolution streams
+
+25
+00:01:36.000 --> 00:01:38.000
+for each graph representation.
+
+26
+00:01:39.000 --> 00:01:42.000
+Encouraged by the recent advances in graph reasoning,
+
+27
+00:01:42.000 --> 00:01:47.000
+we further investigated two twinning attentions between nodes and edges representations.
+
+28
+00:01:48.000 --> 00:01:53.000
+Specifically, we are particularly interested in how the node evolution could benefit from
+
+29
+00:01:53.000 --> 00:01:57.000
+the visual cues lurking inside the multi-dimensional edge features, and,
+
+30
+00:01:57.000 --> 00:02:02.000
+whether the evolved node features could further payback to augment the edge evolution.
+
+31
+00:02:02.000 --> 00:02:04.000
+These two assumptions bring us EdgeGCN.
+
+32
+00:02:05.000 --> 00:02:10.000
+With EdgeGCN, we could now exploit multi-dimensional edge features to conduct
+
+33
+00:02:10.000 --> 00:02:14.000
+more comprehensive reasoning on graph representation learning.
+
+34
+00:02:15.000 --> 00:02:19.000
+In last stage, two Multilayer Perceptron based inference streams are established
+
+35
+00:02:19.000 --> 00:02:24.000
+as Node MLP and Edge MLP with residual connections.
+
+36
+00:02:25.000 --> 00:02:28.000
+Our ultimate goal is to create a scene graph, whose nodes and edges depict the
+
+37
+00:02:28.000 --> 00:02:32.000
+instance objects and their inner structural relationships, respectively.
+
+38
+00:02:39.000 --> 00:02:44.000
+For our real-world scene graph studies, we manually checked and carefully revised
+
+39
+00:02:44.000 --> 00:02:49.000
+the raw 3DSSG datasets to a cleaned version, with mappings to
+
+40
+00:02:49.000 --> 00:02:54.000
+more popular and meaningful sets of instance semantics and structural relationships.
+
+41
+00:02:55.000 --> 00:03:01.000
+This cleaned version contains 27 Object classes and 16 types of structural Relationships.
+
+42
+00:03:02.000 --> 00:03:05.000
+Below are the changes from the raw one:
+
+43
+00:03:17.000 --> 00:03:21.000
+We outperform other graph reasoning approaches on three related scene graph generation tasks.
+
+44
+00:03:22.000 --> 00:03:26.000
+In our ablation studies, we demonstrate the contribution of each module design.
+
+45
+00:03:27.000 --> 00:03:29.000
+And here is our quantitative comparison with previous work.
+
+46
+00:03:30.000 --> 00:03:33.000
+Here are more qualitative results.
+
+47
+00:03:36.000 --> 00:03:42.000
+We also verified EdgeGCN on conventional graph representation learning tasks,
+
+48
+00:03:42.000 --> 00:03:46.000
+including 3 node-wise classifications on citation datasets,
+
+49
+00:03:46.000 --> 00:03:49.000
+which are Cora, CiteSeer, and Pubmed,
+
+50
+00:03:49.000 --> 00:03:54.000
+and 2 whole-graph recognitions for molecular analysis on Tox21 and BBBP.
+
+51
+00:03:55.000 --> 00:04:00.000
+All models are repeatedly trained and evaluated for 50 runs.
+
+52
+00:04:03.000 --> 00:04:05.000
+Thanks for watching.
+
